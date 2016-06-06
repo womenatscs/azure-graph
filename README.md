@@ -5,8 +5,14 @@
 Add the following to your `composer.json` file:
 ```json
 {
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/womenatscs/azure-graph"
+        }
+    ],
     "require": {
-        "jeffreyhyer/azure-graph": "dev-master"
+        "womenatscs/azure-graph": "dev-master"
     }
 }
 ```

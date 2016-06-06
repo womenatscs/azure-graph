@@ -1,14 +1,18 @@
 {
-    "name": "jeffreyhyer/azure-graph",
+    "name": "womenatscs/azure-graph",
     "description": "Azure Active Directory Graph API",
     "keywords": ["azure", "active directory", "microsoft graph"],
     "license": "MIT",
-    "homepage": "https://github.com/jeffreyhyer/azure-graph",
+    "homepage": "https://github.com/womenatscs/azure-graph",
     "support": {
-        "issues": "https://github.com/jeffreyhyer/azure-graph/issues",
-        "source": "https://github.com/jeffreyhyer/azure-graph"
+        "issues": "https://github.com/womenatscs/azure-graph/issues",
+        "source": "https://github.com/womenatscs/azure-graph"
     },
     "authors": [
+        {
+            "name": "Brian Liu Xu",
+            "email": "blx@scs4all.cs.cmu.edu"
+        },
         {
             "name": "Jeffrey Hyer",
             "email": "github-azure-graph@jeffreyhyer.com"
