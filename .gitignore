@@ -1,4 +1,5 @@
 .DS_Store
+composer.phar
 composer.lock
 vendor/
 test.php
@@ -6,3 +7,4 @@ Vagrantfile
 vagrant-bootstrap.sh
 .vagrant/
 _server/
+.DAV/
