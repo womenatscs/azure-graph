@@ -32,6 +32,18 @@ class Users extends AbstractApi implements EntityInterface
     }
 
     /**
+     * Fetch the groups of the User identified by $userId
+     *
+     * @param  string $userId   Azure objectId of the User to query
+     *
+     * @return stdClass         Standard response object from $this->_respond()
+     */
+    public function memberships($userId)
+    {
+        return $this->get("users/{$userId}/memberOf");
+    }
+
+    /**
      * [find description]
      *
      * @param  [type] $filters [description]
@@ -66,6 +78,21 @@ class Users extends AbstractApi implements EntityInterface
     public function edit($userId, $user)
     {
         return $this->patch("users/{$userId}", $user);
+    }
+
+    /**
+     * Actions have side effects in the directory. That is, when you call an action,
+     * it may alter data in the directory.
+     *
+     * @param  string $userId       Azure objectId of the User
+     * @param  array  $actionName   Which action to execute
+     * @param  array  $actionParam  Parameter to pass along in the call
+     *
+     * @return stdClass         Standard response object from $this->_respond()
+     */
+    public function action($userId, $actionName, $actionParam)
+    {
+        return $this->post("users/{$userId}/{$actionName}", $actionParam);
     }
 
     /**

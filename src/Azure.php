@@ -155,6 +155,11 @@ class Azure
                 $api = new Api\Users($this);
                 break;
 
+            case 'group':
+            case 'groups':
+                $api = new Api\Groups($this);
+                break;
+
             default:
                 return new \Exception("Invalid API ($name)");
         }
