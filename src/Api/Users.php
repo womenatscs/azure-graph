@@ -20,6 +20,18 @@ class Users extends AbstractApi implements EntityInterface
     }
 
     /**
+     * Fetch the User identified by $immutableId
+     *
+     * @param  string $immutableId   Azure immutableId of the User to fetch
+     *
+     * @return stdClass         Standard response object from $this->_respond()
+     */
+    public function immutable($immutableId)
+    {
+        return $this->get('users', ['$filter' => "immutableId eq '{$immutableId}'"]);
+    }
+
+    /**
      * Fetch the User identified by $userId
      *
      * @param  string $userId   Azure objectId of the User to fetch
